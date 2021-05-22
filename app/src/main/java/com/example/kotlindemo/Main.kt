@@ -1,11 +1,7 @@
 package com.example.kotlindemo
 
 fun main() {
-//    val myNumber="f"
-//    println(myNumber)
-//    print("Hello $myNumber")
-    var myString:String = "Android Kotlin"
-    var myFloat:Float = 13.37F
-    val myDouble:Double = 3.14159265358979
-    var myInt:Int = 25
+    print("Hello World")
 }
+//https://telescope.adobeconnect.com/_a1110142776/ptfabfvtb0q9/?session=apac1breez4txfuept5fakqvnr 10/05
+//https://telescope.adobeconnect.com/_a1110142776/p4htkfvp2bsr/?session=apac1breez9i9b72czubbhqvd6 11/05
