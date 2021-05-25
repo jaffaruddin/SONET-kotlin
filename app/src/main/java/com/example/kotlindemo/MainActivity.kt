@@ -2,8 +2,10 @@ package com.example.kotlindemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -13,18 +15,15 @@ class MainActivity : AppCompatActivity() {
 
         var btn = findViewById<Button>(R.id.btn)
         var txt = findViewById<TextView>(R.id.txt)
+        var input_result = findViewById<EditText>(R.id.input_radius)
 
-        var flag = false
         btn.setOnClickListener(View.OnClickListener {
                 //Code here executes on main thread after user presses button
-            if(flag) {
-                txt.setText("Abc")
-                flag = false
-            }
-            else {
-                txt.setText("Xyz")
-                flag = true
-            }
+            var radius:Double = input_result.text.toString().toDouble()
+            val pi:Double = 3.141
+            var area = pi*radius*radius
+
+            txt.setText("Result : $area")
         })
     }
 }
