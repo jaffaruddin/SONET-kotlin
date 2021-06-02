@@ -1,15 +1,50 @@
 package com.example.kotlindemo
+import java.util.*
 
-fun main() {
-    a@ for(i in 1..5){
-      b@ for(j in 1..4){
-          if(i==3 || j==2){
-              continue@a
-          }
-          println("i= $i;j = $j")
-      }
+fun randomDay():String{
+    var day:String = ""
+    var arr = arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    day = arr[Random().nextInt(arr.size)]
+    return day
+}
+
+fun main(){
+    feedingManualForFish()
+}
+
+fun feedingManualForFish(){
+    var day:String = randomDay()
+    var food = fishFood(day)
+    var isChangeWaterNeeded = shouldChangeWater(day)
+    println("Today is $day, you need to feed $food")
+    println("Change Water : ${if(isChangeWaterNeeded)"is Needed" else "Not Needed"}")
+}
+
+fun fishFood(day:String):String{
+    var food:String = ""
+    when(day){
+        "Monday" -> food = "flakes"
+        "Tuesday" -> food = "pellets"
+        "Wednesday" -> food = "redworms"
+        "Thursday" -> food = "granules"
+        "Friday" -> food = "mosquitoes"
+        "saturday" -> food = "lettuce"
+        "Sunday" -> food = "plankton"
+    }
+    return food
+}
+
+fun isHot(temp: Int) = temp > 30
+
+fun isDirt(dirt: Int) = dirt > 30
+
+fun isSunday(day: String) = day == "Sunday"
+
+fun shouldChangeWater(day: String, temp: Int = 22, dirt: Int = 20): Boolean{
+    return when{
+        isHot(temp) -> true
+        isDirt(dirt) -> true
+        isSunday(day) -> true
+        else -> false
     }
 }
-//https://telescope.adobeconnect.com/_a1110142776/ptfabfvtb0q9/?session=apac1breez4txfuept5fakqvnr 10/05
-//https://telescope.adobeconnect.com/_a1110142776/p4htkfvp2bsr/?session=apac1breez9i9b72czubbhqvd6 11/05
-//https://telescope.adobeconnect.com/_a1110142776/pwmqgea326in/?session=apac1breezbreueztdgbicxpcu 12/05
