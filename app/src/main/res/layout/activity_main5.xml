@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86E3EC"
+    tools:context=".MainActivity5">
+
+    <EditText
+        android:id="@+id/dirtId"
+        android:layout_width="120dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:hint="Dirt Level"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleHead"
+        android:layout_width="257dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="85dp"
+        android:text="Fish Feeding Manual"
+        android:textAlignment="center"
+        android:textColor="#D84315"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/daySpinner"
+        android:layout_width="208dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="172dp"
+        android:entries="@array/days"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tempId"
+        android:layout_width="120dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="264dp"
+        android:ems="10"
+        android:hint="Water Temp"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="452dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="OUTPUT"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textColorHint="#EF0A0A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="368dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

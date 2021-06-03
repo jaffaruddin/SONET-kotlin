@@ -13,11 +13,13 @@ fun main(){
 }
 
 fun feedingManualForFish(){
+    var temp = Random().nextInt(40)
+    var dirt = Random().nextInt(42)
     var day:String = randomDay()
     var food = fishFood(day)
-    var isChangeWaterNeeded = shouldChangeWater(day)
+    var isChangeWaterNeeded = shouldChangeWater(day,temp,dirt)
     println("Today is $day, you need to feed $food")
-    println("Change Water : ${if(isChangeWaterNeeded)"is Needed" else "Not Needed"}")
+    println("Change Water : ${if(isChangeWaterNeeded)"is Needed" else "Not Needed"},temprature is $temp and dirt level of water is $dirt")
 }
 
 fun fishFood(day:String):String{
@@ -40,7 +42,7 @@ fun isDirt(dirt: Int) = dirt > 30
 
 fun isSunday(day: String) = day == "Sunday"
 
-fun shouldChangeWater(day: String, temp: Int = 22, dirt: Int = 20): Boolean{
+fun shouldChangeWater(day: String, temp: Int, dirt: Int): Boolean{
     return when{
         isHot(temp) -> true
         isDirt(dirt) -> true
